@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>垃圾車幾點到（Demo）</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+body{font-family:-apple-system,"PingFang TC","Noto Sans TC",sans-serif;margin:0;background:#f5f6f4;color:#222}
+header{background:#1f6f43;color:#fff;padding:12px 16px}header h1{font-size:20px;margin:0}
+#stamp{font-size:13px;opacity:.9;margin-top:4px}
+main{padding:12px;max-width:640px;margin:auto}
+select,input{font-size:17px;padding:10px;border:1px solid #bbb;border-radius:8px;width:100%;box-sizing:border-box;margin-bottom:8px}
+.card{background:#fff;border-radius:12px;padding:12px;margin:8px 0;box-shadow:0 1px 3px #0002}
+.big{font-size:34px;font-weight:700;color:#1f6f43}.muted{color:#666;font-size:14px}
+.notice{background:#fff4d6;border-left:4px solid #e0a800;padding:10px;border-radius:8px;margin:8px 0;font-size:15px}
+.error{background:#fde2e2;border-left-color:#c62828}
+button{font-size:15px;padding:8px 12px;border-radius:8px;border:1px solid #1f6f43;background:#fff;color:#1f6f43;margin:4px 4px 0 0}
+button.on{background:#1f6f43;color:#fff}
+#map{height:300px;border-radius:12px;margin:8px 0}
+h2{font-size:17px;margin:14px 0 4px}footer{font-size:12px;color:#555;padding:16px;max-width:640px;margin:auto}
+</style></head><body>
+<header><h1>垃圾車幾點到 <small style="font-size:12px">Demo・無廣告・免登入</small></h1><div id="stamp" data-feature="data-stamp">資料載入中…</div></header>
+<main>
+<select id="city" data-feature="city"></select>
+<div id="cityNote" class="notice"></div>
+<input id="q" data-feature="search" placeholder="輸入區、里或地址，例如：北屯 崇德路" autocomplete="off">
+<h2>★ 我的常用清運點</h2><div id="favs" data-feature="favorites"><div class="muted">還沒有收藏。按清運點上的「☆ 收藏」，下次打開直接看到，換版也不會消失（存在這支手機裡）。</div></div>
+<h2>查詢結果</h2><div id="results" data-feature="next-arrival"><div class="muted">輸入地址或里名開始查詢。</div></div>
+<h2>垃圾車即時位置</h2><div id="map" data-feature="map"></div><div id="truckInfo" class="muted" data-feature="truck-live"></div>
+</main>
+<footer data-feature="credit">資料來源：臺中市政府環境保護局「臺中市定時定點垃圾收運地點」、「臺中市垃圾清運及資源回收車動態資訊」；臺南市政府環境保護局「臺南市垃圾車GPS資料」；高雄市政府環境保護局「垃圾車及資源回收車動態資訊」，皆依政府資料開放授權條款第 1 版使用。地圖 © OpenStreetMap 貢獻者。本頁為展示用，非官方服務，時間以官方班表為準。</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="app.js"></script>
+</body></html>
